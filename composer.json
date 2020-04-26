@@ -1,0 +1,17 @@
+{
+  "name": "wulilele/tickettrip2",
+  "description": "tickettrip2",
+  "minimum-stability": "stable",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "wulilele",
+      "email": "1181200882@qq.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "wulilele\\tickettrip2": "src/tickettrip2"
+    }
+  }
+}
