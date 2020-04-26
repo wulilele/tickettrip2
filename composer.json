@@ -11,7 +11,10 @@
   ],
   "autoload": {
     "psr-4": {
-      "wulilele\\tickettrip2": "src/tickettrip2"
+      "wulilele\\tickettrip2\\": "src/tickettrip2"
     }
+  },
+  "require": {
+    "guzzlehttp/guzzle": "^6.5"
   }
 }
