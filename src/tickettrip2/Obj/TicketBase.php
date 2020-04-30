@@ -3,6 +3,7 @@
 
 namespace wulilele\tickettrip2\Obj;
 use wulilele\tickettrip2\kernel\Config;
+use wulilele\tickettrip2\kernel\Sign;
 
 /**
  * Class TicketBase 请求基类
@@ -22,13 +23,14 @@ class TicketBase
      * @params $password string 加密后的密码
      */
     protected $values = array();
+    protected $header = array();
 
     public function __construct()
     {
-        $this->values['userName'] = Config::$username; //用户名
+        $this->header['userName'] = Config::$username; //用户名
         $currentTimestamp = date('YmdHis');
-        $this->values['timestamp'] = $currentTimestamp; //当前时间戳
-        //$this->values['password'] = md5(Config::$PASSWORD . $currentTimestamp); //加密密码
+        $this->header['timestamp'] = $currentTimestamp; //当前时间戳
+        $this->header['sign'] = Sign::sign(json_encode($this->getValues()),$currentTimestamp); //加密密码
     }
 
     /**
