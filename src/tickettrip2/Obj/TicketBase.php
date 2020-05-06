@@ -42,6 +42,15 @@ class TicketBase
     }
 
     /**
+     * 获取请求头
+     * @return array
+     */
+    public function getHeaders()
+    {
+        return $this->header;
+    }
+
+    /**
      * 参数合法性检查
      */
     public function check(){
