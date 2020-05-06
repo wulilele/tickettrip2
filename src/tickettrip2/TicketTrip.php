@@ -67,8 +67,14 @@ class TicketTrip
 
     /**
      * 执行请求
+     * @param $class
      */
-    public function exec(){
-        echo Config::$username;
+    public function exec($class){
+        if(class_exists($class) && !empty($class)){
+            $obj = new $class();
+        }else{
+            throw new Exception("接口不存在");
+        }
+        return $this->request($obj);
     }
 }
