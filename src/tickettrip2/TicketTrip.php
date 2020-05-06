@@ -33,7 +33,7 @@ class TicketTrip
 
     /**
      * 云平台接口请求统一方法
-     * @param $object TicketBase 参数对象
+     * @param object $object TicketBase 参数对象
      * @return array
      * @throws Exception
      */
