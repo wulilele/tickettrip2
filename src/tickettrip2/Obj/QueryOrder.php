@@ -7,7 +7,7 @@ namespace wulilele\tickettrip2\Obj;
  * Class GetOrderInfoByOrderNo 查询订单
  * @package wulilele\tickettrip2\Obj
  */
-class GetOrderInfoByOrderNo extends TicketBase
+class QueryOrder extends TicketBase
 {
     public static $path = "/ticketInterface/queryOrder";
 

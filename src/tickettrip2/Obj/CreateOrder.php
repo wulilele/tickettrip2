@@ -7,7 +7,7 @@ namespace wulilele\tickettrip2\Obj;
  * Class SaveOrder 下单
  * @package wulilele\tickettrip2\Obj
  */
-class SaveOrder extends TicketBase
+class CreateOrder extends TicketBase
 {
     public static $path = "/ticketInterface/createOrder";
 

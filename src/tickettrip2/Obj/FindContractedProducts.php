@@ -7,7 +7,7 @@ namespace wulilele\tickettrip2\Obj;
  * Class ContractedProducts 签约产品
  * @package wulilele\tickettrip2\Obj
  */
-class ContractedProducts extends TicketBase
+class FindContractedProducts extends TicketBase
 {
     public static $path = "/ticketInterface/findContractedProducts";
 
