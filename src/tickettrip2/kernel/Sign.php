@@ -15,7 +15,7 @@ class Sign
      * @param $timestamp string 请求时间戳
      * @return string 进行签名转换后的sign值
      */
-    public function sign($body,$timestamp){
+    public static function sign($body,$timestamp){
         return strtolower(md5(Config::$username . Config::$key . $timestamp . $body));
     }
 
@@ -26,7 +26,7 @@ class Sign
      * @param $body string 请求body参数
      * @return bool
      */
-    public function check($sign, $timestamp ,$body){
+    public static function check($sign, $timestamp ,$body){
         return strtolower(md5(Config::$key . $timestamp . $body)) == $sign;
     }
 
