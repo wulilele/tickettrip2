@@ -22,7 +22,7 @@ class Config
      */
     public static $key = "demo_key";
     /**
-     * @var Api接口路径
+     * @var string Api接口路径
      */
     public static $apiurl = "apiUrl";//API接口地址
 
