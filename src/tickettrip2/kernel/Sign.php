@@ -11,7 +11,7 @@ class Sign
 {
     /**
      * 生成请求header签名sign参数
-     * @param $body array 请求body参数
+     * @param $body string 请求body参数
      * @param $timestamp string 请求时间戳
      * @return string 进行签名转换后的sign值
      */
