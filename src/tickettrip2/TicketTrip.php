@@ -71,10 +71,9 @@ class TicketTrip
      */
     public function exec($class){
         if(class_exists($class) && !empty($class)){
-            $obj = new $class();
+            return $this->request($class);
         }else{
             throw new Exception("接口不存在");
         }
-        return $this->request($obj);
     }
 }
