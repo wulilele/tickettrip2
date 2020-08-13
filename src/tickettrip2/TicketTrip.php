@@ -53,6 +53,11 @@ class TicketTrip
         $headers = [
             "Content-Type : application/json"
         ];
+
+        $currentTimestamp = date('Y-m-d H:i:s');
+        $object->header['userName'] = Config::$username; //用户名
+        $object->header['timestamp'] = $currentTimestamp; //当前时间戳
+        $object->header['sign'] = Sign::sign(json_encode($param),$currentTimestamp); //加密密码
         $header_data = $object->getHeaders();
         foreach ($header_data as $key=>$val){
             array_push($headers,$key.' : '.$val);
