@@ -22,8 +22,8 @@ class TicketBase
      * @params $timestamp string 当前时间戳
      * @params $password string 加密后的密码
      */
-    protected $values = array();
-    protected $header = array();
+    public $values = array();
+    public $header = array();
 
     public function __construct()
     {
