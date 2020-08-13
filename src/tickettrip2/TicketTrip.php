@@ -67,13 +67,9 @@ class TicketTrip
 
     /**
      * 执行请求
-     * @param $class
+     * @param $obj
      */
-    public function exec($class){
-        if(class_exists($class) && !empty($class)){
-            return $this->request($class);
-        }else{
-            throw new Exception("接口不存在");
-        }
+    public function exec($obj){
+        return $this->request($obj);
     }
 }
