@@ -28,7 +28,7 @@ class TicketBase
     public function __construct()
     {
         $this->header['userName'] = Config::$username; //用户名
-        $currentTimestamp = date('YmdHis');
+        $currentTimestamp = date('Y-m-d H:i:s');
         $this->header['timestamp'] = $currentTimestamp; //当前时间戳
         $this->header['sign'] = Sign::sign(json_encode($this->getValues()),$currentTimestamp); //加密密码
     }
