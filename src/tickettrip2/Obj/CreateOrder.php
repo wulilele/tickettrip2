@@ -16,7 +16,7 @@ class CreateOrder extends TicketBase
         parent::__construct();
         //设置默认参数
         $this->values['tackCertificateTypeId'] = "1";   //默认刷取票身份证入园
-        $this->values['phoneAreaNunber'] = "86"; //默认签单
+        $this->values['phoneAreaNumber'] = "86"; //默认签单
     }
 
     /**
@@ -59,6 +59,23 @@ class CreateOrder extends TicketBase
         $this->values["orderDetailList"] = $array;
     }
 
+    /**
+     * 证件类型
+     * @param $tackCertificateTypeId
+     */
+    public function setTackCertificateTypeId($tackCertificateTypeId)
+    {
+        $this->values['tackCertificateTypeId'] = $tackCertificateTypeId;
+    }
+
+    /**
+     * 手机号区号
+     * @param $phoneAreaNumber
+     */
+    public function setPhoneAreaNumber($phoneAreaNumber)
+    {
+        $this->values['phoneAreaNumber'] = $phoneAreaNumber;
+    }
     /**
      * 参数合法性检查
      * @return bool|void
