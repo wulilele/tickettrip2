@@ -51,7 +51,7 @@ class TicketTrip
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         $headers = [
-            "Content-Type : application/json"
+            "Content-Type: application/json"
         ];
 
         $currentTimestamp = date('Y-m-d H:i:s');
@@ -60,7 +60,7 @@ class TicketTrip
         $object->header['sign'] = Sign::sign($param,$currentTimestamp); //加密密码
         $header_data = $object->getHeaders();
         foreach ($header_data as $key=>$val){
-            array_push($headers,$key.' : '.$val);
+            array_push($headers,$key.': '.$val);
         }
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
         curl_setopt($ch, CURLOPT_POST, 1);
