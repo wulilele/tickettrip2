@@ -7,10 +7,10 @@ namespace wulilele\tickettrip2\Obj;
  * Class TimeControlList 购票信息的saveOrder的一部分
  * @package wulilele\tickettrip2\Obj
  */
-class TimeControlList
+class TimeControlParamList
 {
     public $projectId; //项目ID
-    public $timeControlId; //分时预约时段ID
+    public $ordTimeControlId; //分时预约时段ID
 
     /**
      * 项目ID
@@ -23,10 +23,10 @@ class TimeControlList
 
     /**
      * 分时预约时段
-     * @param $timeControlId
+     * @param $ordTimeControlId
      */
-    public function setTimeControlId($timeControlId)
+    public function setOrdTimeControlId($ordTimeControlId)
     {
-        $this->timeControlId = $timeControlId;
+        $this->ordTimeControlId = $ordTimeControlId;
     }
 }

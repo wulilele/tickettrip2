@@ -12,12 +12,11 @@ class TicketInfomation
     public $saleSum;  //购票数量
     public $thirdscenicTicketNo; //第三方产品编号
     public $scenicTicketNo;    //产品编号
-    public $setmentPrice;  //结算价格
-    public $timeControlList; //分时预约时段集合
-    public $validStartDT; //有效开始时间
-    public $validEndDT; //有效结束时间
-    public $remark =""; //备注
+    public $settlementPrice;  //结算价格
+    public $timeControlParamList; //分时预约时段集合
+    public $arriveDT; //游玩日期
     public $orderCertificateList; //实名制信息
+    public $unitPrice; //售卖价格
     /**
      * 实名制信息
      * @param array $orderCertificateList 实名制信息对象数组
@@ -46,12 +45,12 @@ class TicketInfomation
     }
 
     /**
-     * 票种签约价格
-     * @param string $setmentPrice
+     * 结算价格
+     * @param string $settlementPrice
      */
-    public function setSetmentPrice($setmentPrice)
+    public function setSettlementPrice($settlementPrice)
     {
-        $this->setmentPrice = $setmentPrice;
+        $this->settlementPrice = $settlementPrice;
     }
 
     /**
@@ -67,34 +66,25 @@ class TicketInfomation
      * 分时预约时段集合
      * @param array $array
      */
-    public function setTimeControlList($array = array()){
-        $this->timeControlList = $array;
+    public function setTimeControlParamList($array = array()){
+        $this->timeControlParamList = $array;
     }
 
     /**
-     * 有效开始时间
-     * @param $start_date
+     * 游玩日期
+     * @param $arriveDT
      */
-    public function setValidStartDT($start_date)
+    public function setArriveDT($arriveDT)
     {
-        $this->validStartDT = $start_date;
+        $this->arriveDT = $arriveDT;
     }
 
     /**
-     * 有效结束时间
-     * @param $end_date
+     * 售卖价格
+     * @param $unitPrice
      */
-    public function setValidEndDT($end_date)
+    public function setUnitPrice($unitPrice)
     {
-        $this->validEndDT = $end_date;
-    }
-
-    /**
-     * 备注
-     * @param $remark
-     */
-    public function setRemark($remark)
-    {
-        $this->remark = $remark;
+        $this->unitPrice = $unitPrice;
     }
 }

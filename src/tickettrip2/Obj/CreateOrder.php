@@ -76,6 +76,16 @@ class CreateOrder extends TicketBase
     {
         $this->values['phoneAreaNumber'] = $phoneAreaNumber;
     }
+
+    /**
+     * 备注
+     * @param $remake
+     */
+    public function setRemake($remake)
+    {
+        $this->values['remake'] = $remake;
+    }
+
     /**
      * 参数合法性检查
      * @return bool|void

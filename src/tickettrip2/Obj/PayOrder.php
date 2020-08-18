@@ -20,10 +20,10 @@ class PayOrder extends TicketBase
     }
 
     /**
-     * @param $paymentType Integer 支付方式
+     * @param $paymentTypeId Integer 支付方式
      * @require true 必填
      */
-    public function setPaymentType($paymentType){
-        $this->values['paymentType'] = $paymentType;
+    public function setPaymentTypeId($paymentTypeId){
+        $this->values['paymentTypeId'] = $paymentTypeId;
     }
 }
