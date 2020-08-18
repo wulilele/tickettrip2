@@ -10,7 +10,7 @@ namespace wulilele\tickettrip2\Obj;
 class TicketInfomation
 {
     public $saleSum;  //购票数量
-    public $thirdscenicTicketNo; //第三方产品编号
+    public $thirdScenicTicketNo; //第三方产品编号
     public $scenicTicketNo;    //产品编号
     public $settlementPrice;  //结算价格
     public $timeControlParamList; //分时预约时段集合
@@ -39,9 +39,9 @@ class TicketInfomation
      * 第三方产品编号
      * @param string $thirdTypeNO
      */
-    public function setThirdscenicTicketNo($thirdTypeNO)
+    public function setThirdScenicTicketNo($thirdScenicTicketNo)
     {
-        $this->thirdscenicTicketNo = $thirdTypeNO;
+        $this->thirdScenicTicketNo = $thirdScenicTicketNo;
     }
 
     /**
