@@ -79,11 +79,11 @@ class CreateOrder extends TicketBase
 
     /**
      * 备注
-     * @param $remake
+     * @param $remark
      */
-    public function setRemake($remake)
+    public function setRemark($remark)
     {
-        $this->values['remake'] = $remake;
+        $this->values['remark'] = $remark;
     }
 
     /**

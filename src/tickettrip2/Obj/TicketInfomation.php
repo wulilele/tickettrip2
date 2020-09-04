@@ -17,6 +17,7 @@ class TicketInfomation
     public $arriveDT; //游玩日期
     public $orderCertificateList; //实名制信息
     public $unitPrice; //售卖价格
+    public $shiftsId; //班次ID
     /**
      * 实名制信息
      * @param array $orderCertificateList 实名制信息对象数组
@@ -86,5 +87,14 @@ class TicketInfomation
     public function setUnitPrice($unitPrice)
     {
         $this->unitPrice = $unitPrice;
+    }
+
+    /**
+     * 班次ID
+     * @param $shiftsId
+     */
+    public function setShiftsId($shiftsId)
+    {
+        $this->shiftsId = $shiftsId;
     }
 }
